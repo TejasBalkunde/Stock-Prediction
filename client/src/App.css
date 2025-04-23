@@ -1,0 +1,182 @@
+.App {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: black;
+  animation: fadeInApp 1s ease-in-out;
+}
+
+@keyframes fadeInApp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.titleh1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation-delay: 0.2s;
+}
+
+.button-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background-color: white;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  transform: scale(1.05);
+  background-color: #eee;
+}
+
+.button-container .active {
+  background-color: #333;
+  color: white;
+  transform: scale(1.1);
+}
+
+.dropdown select,
+.dropdown button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.dropdown select:hover,
+.dropdown button:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.metrics {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.graph img {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.graph img:hover {
+  transform: scale(1.02);
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 30px;
+}
+
+.stock-chart-loader {
+  text-align: center;
+  color: white;
+}
+
+.stock-chart-loader .chart {
+  width: 300px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.stock-loader {
+  text-align: center;
+  color: white;
+}
+
+.stock-loader .line {
+  width: 80px;
+  height: 10px;
+  background: linear-gradient(90deg, #4caf50, #2196f3, #4caf50);
+  background-size: 200% auto;
+  animation: shimmer 1.2s linear infinite;
+  border-radius: 10px;
+  margin: 0 auto 10px;
+}
+
+.stock-loader .dot {
+  width: 20px;
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: bounce 0.6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
